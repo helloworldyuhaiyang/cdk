@@ -1,0 +1,34 @@
+TimeHandler.o: src/TimeHandler.cpp src/TimeHandler.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTTPRequestHandler.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/Net.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Foundation.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Config.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Platform.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Platform_POSIX.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Alignment.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Bugcheck.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Types.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTTPServerRequest.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTTPRequest.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTTPMessage.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/MessageHeader.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/NameValueCollection.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/String.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Ascii.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/ListMap.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Exception.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/SocketAddress.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/SocketAddressImpl.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/SocketDefs.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/IPAddress.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/IPAddressImpl.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/AutoPtr.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTTPServerResponse.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTTPResponse.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTTPCookie.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Timestamp.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Net/include/Poco/Net/HTMLForm.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/DateTime.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Timespan.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/DateTimeFormatter.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/LocalDateTime.h

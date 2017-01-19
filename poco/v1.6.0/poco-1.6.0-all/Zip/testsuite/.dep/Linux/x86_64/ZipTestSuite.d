@@ -1,0 +1,24 @@
+ZipTestSuite.o: src/ZipTestSuite.cpp src/ZipTestSuite.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/CppUnit/include/CppUnit/TestSuite.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/CppUnit/include/CppUnit/CppUnit.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/CppUnit/include/CppUnit/Guards.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/CppUnit/include/CppUnit/Test.h \
+ src/ZipTest.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Zip/include/Poco/Zip/Zip.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Foundation.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Config.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Platform.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Platform_POSIX.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Alignment.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Bugcheck.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Types.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Zip/include/Poco/Zip/ZipLocalFileHeader.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Zip/include/Poco/Zip/ZipUtil.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Zip/include/Poco/Zip/ZipCommon.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/DateTime.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Timestamp.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Timespan.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/Foundation/include/Poco/Path.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/CppUnit/include/CppUnit/TestCase.h \
+ /home/yhy/cpp_environment_setup/poco/v1.6.0/poco-1.6.0-all/CppUnit/include/CppUnit/CppUnitException.h \
+ src/PartialStreamTest.h src/CompressTest.h
