@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#安装路径
+g_dest_path=/opt/cdk
+#g_dest_path=/opt/devbus
+
+#当前变量
+g_current_path=`pwd`
+
+
+
 #判断系统类型
 get_system()
 {
@@ -20,15 +29,6 @@ get_system()
 
 #全局变量，系统的名字　"ubuntu" "centos"
 g_system=$(get_system)
-
-#当前变量
-g_current_path=`pwd`
-
-#安装路径
-#g_dest_path=${g_current_path}/devbus
-g_dest_path=/opt/cdk
-#g_dest_path=/opt/devbus
-
 
 
 #适用于　cmake ../ -DCMAKE_INSTALL_PREFIX=""  make  make install 安装的库
