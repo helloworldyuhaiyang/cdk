@@ -37,18 +37,6 @@ fi
 ./rabbitmq.sh
 
 
-#install_cpp "${currentPath}/poco" "poco" "v1.6.0" "poco-1.6.0-all"
-
-#安装kafka
-#install_cpp "${currentPath}/kafka" "kafka" "v0.9" "librdkafka-master"
-
-#安装redis-client
-#install_cpp "${currentPath}/redis-client" "redis-client" "v1.0" "redis-client"
-
-#安装taiji
-#install_cpp "${currentPath}/taiji" "taiji" "v1.0" "Taiji"
-
-
 #安装snmp++
 #if [ -x "${currentPath}/snmp++" ]; then
 #    cd ${currentPath}/snmp++
