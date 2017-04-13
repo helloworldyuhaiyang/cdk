@@ -7,24 +7,22 @@ g_dest_path=/opt/cdk
 #当前变量
 g_current_path=`pwd`
 
-
-
 #判断系统类型
 get_system()
 {
-	apt-get &> /dev/null
-	if [ $? -eq 1 ]; then
-		echo 'ubuntu'
-		return
-	fi
+    apt-get &> /dev/null
+    if [ $? -eq 1 ]; then
+	echo 'ubuntu'
+	return
+    fi
 	
-	yum &> /dev/null
-	if [ $? -eq 1 ]; then
-		echo 'centos'
-		return
-	fi
+    yum &> /dev/null
+    if [ $? -eq 1 ]; then
+	echo 'centos'
+	return
+    fi
 
-	echo 'unkonwn'
+    echo 'unkonwn'
 }
 
 #全局变量，系统的名字　"ubuntu" "centos"
@@ -38,8 +36,10 @@ cmake_install_cpp()
     proName=$2
     version=$3
     subProName=$4
+    relayLibPath=$5
     srcPath=${proPath}/${version}/${subProName}
     dest_path=${g_dest_path}/${proName}/${version}
+
     # 检查是否已安装    
     if [ -x "${dest_path}" ]; then
 		echo "===================================="
@@ -57,7 +57,7 @@ cmake_install_cpp()
     fi
     
     # 开始安装
-    cd ${srcPath} 
+    cd ${srcPath}
 	#清空原目录
 	if test -d "build" 
 	then
@@ -65,9 +65,9 @@ cmake_install_cpp()
 	fi
 	mkdir build
 	cd build/
-	cmake ../ -DCMAKE_INSTALL_PREFIX=${dest_path}
-    make -j2
-    make install
+	cmake ../ -DCMAKE_INSTALL_PREFIX=${dest_path} -DRELAY_LIB_PATH=${relayLibPath}
+    	make -j2
+    	make install
 	echo "===================================="
     echo "${proName} ${version} 安装成功"
 	echo "===================================="
@@ -101,14 +101,11 @@ install_cpp()
     
     # 开始安装
     cd ${srcPath} 
-    ./configure --prefix=${dest_path}
+    	./configure --prefix=${dest_path}
 	make clean
-    make -j2
-    make install
+	make -j2
+    	make install
 	echo "===================================="
     echo "${proName} ${version} 安装成功"
 	echo "===================================="
 }
-
-
-

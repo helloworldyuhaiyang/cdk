@@ -1,8 +1,8 @@
 #!/bin/bash
-#########################################################################
-# File Name: taiji.sh
-# Author: yhy
-# Created Time: 2017年01月06日 星期五 15时54分15秒
-#########################################################################
+
+source ./common.sh
 
 
+
+
+cmake_install_cpp "${g_current_path}/taiji" "taiji" "v1.0" "Taiji" "/opt/cdk/poco/v1.6.0"

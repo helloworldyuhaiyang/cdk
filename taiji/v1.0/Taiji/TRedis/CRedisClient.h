@@ -1051,7 +1051,7 @@ public:
 
     void subscribeStart(const VecString& channel, int timeout = 60);
 
-    std::string subscribe();
+    void subscribe(std::tuple<string,string>& result);
 
     void subscribeStop();
 
@@ -1227,7 +1227,7 @@ protected:
 		istr >> value;
 		if ( istr.fail() )
 		{
-			throw ExceptConvert("convert from string to other type value falied");
+            throw ExceptConvert("convert from string to other type value falied");
 		}
 
 		return value;
