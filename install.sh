@@ -25,8 +25,9 @@ else
 fi
 
 #安装 poco
-./poco.sh
-
+#./poco.sh
+#安装 taiji,安装 taiji 必须安装 poco
+./taiji.sh
 #安装 pcap
 #./pcap.sh
 
@@ -43,4 +44,3 @@ fi
   #  ./snmpSet.sh
 #fi
 
-./taiji.sh
