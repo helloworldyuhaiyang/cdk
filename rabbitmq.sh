@@ -6,5 +6,5 @@
 #########################################################################
 source ./common.sh
 
-install_cpp "${g_current_path}/rabbitmq-c" "rabbitmq-c" "v0.8.1" "rabbitmq-c"
+cmake_install_cpp "${g_current_path}/rabbitmq-c" "rabbitmq-c" "v0.8.1" "rabbitmq-c" "-DCMAKE_INSTALL_LIBDIR='lib'"
 

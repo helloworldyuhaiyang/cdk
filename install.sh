@@ -35,7 +35,7 @@ fi
 #./gtest.sh
 
 #安装rabbitmq-c
-#./rabbitmq.sh
+./rabbitmq.sh
 
 
 #安装snmp++
