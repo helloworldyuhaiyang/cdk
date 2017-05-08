@@ -16,6 +16,7 @@ elif [ $g_system == "ubuntu" ]; then
 	apt-get install make  -y
 	apt-get install openssl -y
 	apt-get install libssl-dev -y
+	apt-get install libssl1.0-dev -y #兼容 deepin linux deepinlinux 默认版本 ssl 编译 poco 通不过
 	apt-get install unixodbc -y
 	apt-get install unixodbc-dev -y
 	apt-get install libmysqlclient* -y
