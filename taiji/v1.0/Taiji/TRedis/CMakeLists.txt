@@ -1,4 +1,6 @@
-project(TRedis)
+project(TaijiRedis)
+
+###########################设置依赖##########################
 
 #设置此工程的源码
 set(SRC
@@ -31,11 +33,20 @@ set(HEADFILE
         redisCommon.h
         )
 
-#设置头文件的安装路径
-install(FILES ${HEADFILE} DESTINATION ${CMAKE_INSTALL_PREFIX}/include/Taiji/TRedis)
 
+
+############################设置生成规则############################
 #设置输出的库的类型（SHARED）和名字（add）
-add_library(TaijiRedis SHARED ${SRC})
+add_library(${PROJECT_NAME} SHARED ${SRC})
+
+#设置具体的依赖库
+target_link_libraries(${PROJECT_NAME} PocoFoundation PocoNet )
+
+
+##############################安装步骤############################
+#设置头文件的安装路径
+install(FILES ${HEADFILE} DESTINATION include/Taiji/TRedis)
 
 #设置库文件的安装路径
-install(TARGETS TaijiRedis LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(TARGETS TaijiRedis LIBRARY DESTINATION lib)
+#install(FILES TaijiRedis DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)

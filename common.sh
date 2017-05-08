@@ -29,14 +29,18 @@ get_system()
 g_system=$(get_system)
 
 
-#适用于　cmake ../ -DCMAKE_INSTALL_PREFIX=""  make  make install 安装的库
+#适用于　cmake ../ -DCMAKE_INSTALL_PREFIX="/xxx/xxxx"  make  make install 安装的库
+#CMAKE_INSTALL_PREFIX 已经按照 cdk 的管理包规则设定,不能改写。其他的要传的变量可以通过一个字符串传进去
+#例如:
+#cmake_install_cpp "${g_current_path}/rabbitmq-c" "rabbitmq-c" "v0.8.1" "rabbitmq-c" "-DCMAKE_INSTALL_LIBDIR='lib' -DXXX=abc"
+
 cmake_install_cpp()
 {
     proPath=$1
     proName=$2
     version=$3
     subProName=$4
-    relayLibPath=$5
+    cmake_args=$5
     srcPath=${proPath}/${version}/${subProName}
     dest_path=${g_dest_path}/${proName}/${version}
 
@@ -65,7 +69,7 @@ cmake_install_cpp()
 	fi
 	mkdir build
 	cd build/
-	cmake ../ -DCMAKE_INSTALL_PREFIX=${dest_path} -DRELAY_LIB_PATH=${relayLibPath}
+	cmake ../ -DCMAKE_INSTALL_PREFIX=${dest_path} ${cmake_args}
     	make -j2
     	make install
 	echo "===================================="
@@ -73,7 +77,8 @@ cmake_install_cpp()
 	echo "===================================="
 }
 
-#适用于　./configure --prefix=""  make  make install 安装的库
+#适用于　./configure --prefix="xxx"  make  make install 安装的库
+#--prefix 已近按照 cdk 管理包写好了，不能进行更改
 install_cpp()
 {
     proPath=$1

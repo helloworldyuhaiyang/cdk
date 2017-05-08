@@ -340,6 +340,7 @@ install(FILES
   DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
   )
 
+
 if (BUILD_SHARED_LIBS)
   message(STATUS "Building rabbitmq as a shared library - yes")
 else ()

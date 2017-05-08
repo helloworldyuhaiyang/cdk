@@ -1,8 +1,8 @@
 /**
 * Copyright (c) 2015, 爱wifi（版权声明）
 *
-* @file xxxxxxx
-* @brief 文件的简单介绍
+* @file CUtilTest.cpp
+* @brief Util模块的单元测试
 *
 * 文件的详细介绍
 *
