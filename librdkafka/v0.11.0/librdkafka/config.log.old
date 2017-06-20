@@ -1,0 +1,128 @@
+# configure exec: ./configure 
+# On Fri Jun  2 02:46:51 PDT 2017
+DBG: ccenv: WITH_CC:  --version failed: mklove/modules/configure.base: line 1184: --version: command not found
+DBG: Check ccenv (WITH_CC, action cont (originally cont)) failed: command ' --version' failed:
+mklove/modules/configure.base: line 1184: --version: command not found
+DBG: cxxenv: WITH_CXX:  --version failed: mklove/modules/configure.base: line 1184: --version: command not found
+DBG: Check cxxenv (WITH_CXX, action cont (originally cont)) failed: command ' --version' failed:
+mklove/modules/configure.base: line 1184: --version: command not found
+DBG: Compile check PIC (HAVE_PIC): gcc  -g -O2 -Wall -Werror _mkltmpoXdARN.c -o _mkltmpoXdARN.c.o   -fPIC
+DBG: Compile check gnulib (WITH_GNULD): gcc  -g -O2 -fPIC -Wall -Werror _mkltmp45T3iZ.c -o _mkltmp45T3iZ.c.o   -shared -Wl,-soname,mkltest.0
+DBG: Compile check ldsflagvs (): gcc  -g -O2 -fPIC -Wall -Werror _mkltmprODdJN.c -o _mkltmprODdJN.c.o   -shared -Wl,--version-script=_mkltmp0SGGEZ
+DBG: Compile check __atomic_32 (HAVE_ATOMICS_32): gcc  -g -O2 -fPIC -Wall -Werror _mkltmpoeZMj1.c -o _mkltmpoeZMj1.c.o   
+DBG: Compile check __atomic_64 (HAVE_ATOMICS_64): gcc  -g -O2 -fPIC -Wall -Werror _mkltmp3BqPR6.c -o _mkltmp3BqPR6.c.o   
+DBG: Compile check socket (): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp7UWIFa.c -o _mkltmp7UWIFa.c.o   
+DBG: pkg-config check libpthread (): pkg-config --short-errors --cflags libpthread
+DBG: 'pkg-config --short-errors --cflags libpthread' failed: No package 'libpthread' found
+DBG: Check libpthread_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libpthread' failed:
+No package 'libpthread' found
+DBG: Compile check libpthread (): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpvbB0zp.c -o _mkltmpvbB0zp.c.o   -lpthread
+DBG: pkg-config check zlib (): pkg-config --short-errors --cflags zlib
+DBG: 'pkg-config --short-errors --cflags zlib' failed: No package 'zlib' found
+DBG: Check zlib_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags zlib' failed:
+No package 'zlib' found
+DBG: Compile check zlib (WITH_ZLIB): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpha868P.c -o _mkltmpha868P.c.o   -lz
+DBG: compile check for zlib (WITH_ZLIB) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpha868P.c -o _mkltmpha868P.c.o   -lz: _mkltmpha868P.c:1:18: fatal error: zlib.h: No such file or directory
+compilation terminated.
+DBG: Check zlib (WITH_ZLIB, action disable (originally disable)) failed: compile check failed:
+CC: CC
+flags: -lz
+gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpha868P.c -o _mkltmpha868P.c.o   -lz:
+_mkltmpha868P.c:1:18: fatal error: zlib.h: No such file or directory
+compilation terminated.
+source: #include <zlib.h>
+DBG: pkg-config check libcrypto (): pkg-config --short-errors --cflags libcrypto
+DBG: 'pkg-config --short-errors --cflags libcrypto' failed: No package 'libcrypto' found
+DBG: Check libcrypto_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libcrypto' failed:
+No package 'libcrypto' found
+DBG: Compile check libcrypto (): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp8KNWKd.c -o _mkltmp8KNWKd.c.o   -lcrypto
+DBG: compile check for libcrypto () failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp8KNWKd.c -o _mkltmp8KNWKd.c.o   -lcrypto: /usr/bin/ld: cannot find -lcrypto
+collect2: error: ld returned 1 exit status
+DBG: Check libcrypto (, action disable (originally disable)) failed: compile check failed:
+CC: CC
+flags: -lcrypto
+gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp8KNWKd.c -o _mkltmp8KNWKd.c.o   -lcrypto:
+/usr/bin/ld: cannot find -lcrypto
+collect2: error: ld returned 1 exit status
+source: 
+DBG: pkg-config check liblz4 (): pkg-config --short-errors --cflags liblz4
+DBG: 'pkg-config --short-errors --cflags liblz4' failed: No package 'liblz4' found
+DBG: Check liblz4_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags liblz4' failed:
+No package 'liblz4' found
+DBG: Compile check liblz4 (WITH_LZ4_EXT): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpcFrNPj.c -o _mkltmpcFrNPj.c.o   -llz4
+DBG: compile check for liblz4 (WITH_LZ4_EXT) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpcFrNPj.c -o _mkltmpcFrNPj.c.o   -llz4: _mkltmpcFrNPj.c:1:22: fatal error: lz4frame.h: No such file or directory
+compilation terminated.
+DBG: Check liblz4 (WITH_LZ4_EXT, action disable (originally disable)) failed: compile check failed:
+CC: CC
+flags: -llz4
+gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpcFrNPj.c -o _mkltmpcFrNPj.c.o   -llz4:
+_mkltmpcFrNPj.c:1:22: fatal error: lz4frame.h: No such file or directory
+compilation terminated.
+source: #include <lz4frame.h>
+DBG: pkg-config check libssl (): pkg-config --short-errors --cflags libssl
+DBG: 'pkg-config --short-errors --cflags libssl' failed: No package 'libssl' found
+DBG: Check libssl_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libssl' failed:
+No package 'libssl' found
+DBG: Compile check libssl (WITH_SSL): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpgdOzm1.c -o _mkltmpgdOzm1.c.o   -lssl
+DBG: compile check for libssl (WITH_SSL) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpgdOzm1.c -o _mkltmpgdOzm1.c.o   -lssl: _mkltmpgdOzm1.c:1:25: fatal error: openssl/ssl.h: No such file or directory
+compilation terminated.
+DBG: Check libssl (WITH_SSL, action disable (originally disable)) failed: compile check failed:
+CC: CC
+flags: -lssl
+gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpgdOzm1.c -o _mkltmpgdOzm1.c.o   -lssl:
+_mkltmpgdOzm1.c:1:25: fatal error: openssl/ssl.h: No such file or directory
+compilation terminated.
+source: #include <openssl/ssl.h>
+DBG: pkg-config check libsasl2 (): pkg-config --short-errors --cflags libsasl2
+DBG: 'pkg-config --short-errors --cflags libsasl2' failed: No package 'libsasl2' found
+DBG: Check libsasl2_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libsasl2' failed:
+No package 'libsasl2' found
+DBG: Compile check libsasl2 (WITH_SASL_CYRUS): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpK2MS5C.c -o _mkltmpK2MS5C.c.o   -lsasl2
+DBG: compile check for libsasl2 (WITH_SASL_CYRUS) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpK2MS5C.c -o _mkltmpK2MS5C.c.o   -lsasl2: _mkltmpK2MS5C.c:1:23: fatal error: sasl/sasl.h: No such file or directory
+compilation terminated.
+DBG: Check libsasl2 (WITH_SASL_CYRUS, action disable (originally disable)) failed: compile check failed:
+CC: CC
+flags: -lsasl2
+gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpK2MS5C.c -o _mkltmpK2MS5C.c.o   -lsasl2:
+_mkltmpK2MS5C.c:1:23: fatal error: sasl/sasl.h: No such file or directory
+compilation terminated.
+source: #include <sasl/sasl.h>
+DBG: pkg-config check libsasl (): pkg-config --short-errors --cflags libsasl
+DBG: 'pkg-config --short-errors --cflags libsasl' failed: No package 'libsasl' found
+DBG: Check libsasl_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libsasl' failed:
+No package 'libsasl' found
+DBG: Compile check libsasl (WITH_SASL_CYRUS): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpi1wQxY.c -o _mkltmpi1wQxY.c.o   -lsasl
+DBG: compile check for libsasl (WITH_SASL_CYRUS) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpi1wQxY.c -o _mkltmpi1wQxY.c.o   -lsasl: _mkltmpi1wQxY.c:1:23: fatal error: sasl/sasl.h: No such file or directory
+compilation terminated.
+DBG: Check libsasl (WITH_SASL_CYRUS, action disable (originally disable)) failed: compile check failed:
+CC: CC
+flags: -lsasl
+gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpi1wQxY.c -o _mkltmpi1wQxY.c.o   -lsasl:
+_mkltmpi1wQxY.c:1:23: fatal error: sasl/sasl.h: No such file or directory
+compilation terminated.
+source: #include <sasl/sasl.h>
+DBG: Compile check regex (HAVE_REGEX): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpeD1fUR.c -o _mkltmpeD1fUR.c.o   
+DBG: pkg-config check librt (): pkg-config --short-errors --cflags librt
+DBG: 'pkg-config --short-errors --cflags librt' failed: No package 'librt' found
+DBG: Check librt_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags librt' failed:
+No package 'librt' found
+DBG: Compile check librt (): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpKKLLPC.c -o _mkltmpKKLLPC.c.o   -lrt
+DBG: Compile check strndup (HAVE_STRNDUP): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpP4eHOt.c -o _mkltmpP4eHOt.c.o   
+DBG: pkg-config check libdl (): pkg-config --short-errors --cflags libdl
+DBG: 'pkg-config --short-errors --cflags libdl' failed: No package 'libdl' found
+DBG: Check libdl_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libdl' failed:
+No package 'libdl' found
+DBG: Compile check libdl (WITH_LIBDL): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpToth26.c -o _mkltmpToth26.c.o   -ldl
+DBG: tput reports color support: true
+DBG: Using color escape sequences from tput
+DBG: Loading module builtin (required by base) from mklove/modules/configure.builtin
+DBG: Loading module host (required by base) from mklove/modules/configure.host
+DBG: Loading module cc (required by base) from mklove/modules/configure.cc
+DBG: Loading module librdkafka (required by base) from configure.librdkafka
+DBG: Loading module cxx (required by librdkafka) from mklove/modules/configure.cxx
+DBG: Loading module lib (required by librdkafka) from mklove/modules/configure.lib
+DBG: Loading module pic (required by lib) from mklove/modules/configure.pic
+DBG: Loading module atomics (required by librdkafka) from mklove/modules/configure.atomics
+DBG: Loading module good_cflags (required by librdkafka) from mklove/modules/configure.good_cflags
+DBG: Loading module socket (required by librdkafka) from mklove/modules/configure.socket
+DBG: Loading module parseversion (required by librdkafka) from mklove/modules/configure.parseversion
