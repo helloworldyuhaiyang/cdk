@@ -2,21 +2,26 @@
  * Copyright (c) 2016, 爱wifi（版权声明）
  *
  * @file	Except.h
- * @brief 此文件的简单描述。(必填字段)
- *
- * 此文件的详细功能描述。(可选字段)
+ * @brief Taiji 库的头异常类。
  *
  * @author: 		cj
  * @date: 		2016年1月6日
  *
- * 修订说明:初始版本
+ * 修订说明:v1.0
  */
 #ifndef TAIJI_EXCEPT_H_
 #define TAIJI_EXCEPT_H_
 
 #include <exception>
 #include <string>
-
+/**
+ * @note
+ * 用来快速生成新的异常的类。
+ * TAIJI_NEW_EXCEPTION( name,parent )
+ *
+ * name: 是要生成的异常类
+ * parent: 是新的异常类的父类
+ */
 #define TAIJI_NEW_EXCEPTION( name,parent ) \
     class name : public parent \
     { \

@@ -22,7 +22,7 @@ find_path(POCO_LIBRARY_PATH
         )
 
 if( NOT POCO_LIBRARY_PATH)
-    message( FATAL_ERROR "can not find poco library" )
+    message( FATAL_ERROR "can not find poco library, please set POCO_PATH=\"path of poco\"" )
 endif(NOT POCO_LIBRARY_PATH)
 
 message( STATUS "============POCO_INCLUDE_PATH:${POCO_INCLUDE_PATH}")
