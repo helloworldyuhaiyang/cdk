@@ -1,4 +1,23 @@
 #CDK
+##特别说明
+poco 1.6.1 JSON set() 的时候如果已经存在的 key 则会 set 失败。
+```
+void Object::set(const std::string& key, const Dynamic::Var& value)
+{
+	std::pair<ValueMap::iterator, bool> ret = _values.insert(ValueMap::value_type(key, value));
+	if (_preserveInsOrder)
+	{
+		KeyPtrList::iterator it = _keys.begin();
+		KeyPtrList::iterator end = _keys.end();
+		for (; it != end; ++it)
+		{
+			if (key == **it) return;
+		}
+		_keys.push_back(&ret.first->first);
+	}
+}
+```
+
 ##使用 cdk 开发的优点
 1.一键部署c,c++ 的运行环境。开发环境和生产环境安装好cdk之后，编写的代码,所有的库环境一致，可以保证在开发环的代码上线不会遇到问题。 
 
