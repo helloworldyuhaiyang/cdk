@@ -1,6 +1,6 @@
 #CDK
 ##特别说明
-poco 1.6.1 JSON set() 的时候如果已经存在的 key 则会 set 失败。
+poco 1.6.1 JSON set() 的时候如果key已经存在的 key 则会 set 失败。
 ```
 void Object::set(const std::string& key, const Dynamic::Var& value)
 {
