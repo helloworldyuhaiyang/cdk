@@ -79,7 +79,17 @@ TAIJI_NEW_EXCEPTION(ExceptTUtil, Except);
 //业务模块的基类异常
 TAIJI_NEW_EXCEPTION(ExceptBusiness, Except);
 
+TAIJI_NEW_EXCEPTION(ExceptionPermission, Except);
+
+TAIJI_NEW_EXCEPTION(ExceptRuntime, Except);
+
+TAIJI_NEW_EXCEPTION(ExceptData, ExceptRuntime);
+
+TAIJI_NEW_EXCEPTION(ExceptInvalidArg, ExceptData);
+
+TAIJI_NEW_EXCEPTION(ExceptNullptr, ExceptData);
 /////////////////////////////////////////////////////////////////////////////////
+
 
 }//namespace Taiji
 
