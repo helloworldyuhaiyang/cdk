@@ -95,7 +95,7 @@ CRedisClient *CRedisPool::_getConn(long millisecond)
     Poco::Mutex::ScopedLock lock(_mutex);
 
     int32_t connNum = _getConn();
-    if ( connNum < 0 )
+    while ( connNum < 0 )
     {
         REDIS_DEBUGOUT( "getConn()", "waitting for a idle connection" );
         _cond.wait(_mutex, millisecond );
@@ -117,7 +117,7 @@ CRedisClient* CRedisPool::_getConn( int32_t& connNum,long millisecond )
     }
     Poco::Mutex::ScopedLock lock(_mutex);
     connNum = _getConn();
-    if ( connNum < 0 )
+    while ( connNum < 0 )
     {
         REDIS_DEBUGOUT( "getConn():", "waitting for a idle connection" );
         _cond.wait(_mutex,millisecond);
