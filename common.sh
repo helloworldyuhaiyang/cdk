@@ -1,33 +1,17 @@
 #!/bin/bash
 
+#============可以修改的部分================
 #安装路径
 g_dest_path=/opt/cdk
 #g_dest_path=/opt/devbus
 
-#当前变量
-g_current_path=`pwd`
-
-#判断系统类型
-get_system()
-{
-    apt-get &> /dev/null
-    if [ $? -eq 1 ]; then
-	echo 'ubuntu'
-	return
-    fi
-	
-    yum &> /dev/null
-    if [ $? -eq 1 ]; then
-	echo 'centos'
-	return
-    fi
-
-    echo 'unkonwn'
-}
-
 #全局变量，系统的名字　"ubuntu" "centos"
 g_system=$(get_system)
 
+#==========================================
+
+#当前变量
+g_current_path=`pwd`
 
 #适用于　cmake ../ -DCMAKE_INSTALL_PREFIX="/xxx/xxxx"  make  make install 安装的库
 #CMAKE_INSTALL_PREFIX 已经按照 cdk 的管理包规则设定,不能改写。其他的要传的变量可以通过一个字符串传进去

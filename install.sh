@@ -9,8 +9,7 @@ fi
 
 
 
-system=$(get_system)
-echo "你的系统是: "$system
+echo "你的系统是: "$g_system
 
 #安装基础工具
 #安装poco 1.6.0 依赖
