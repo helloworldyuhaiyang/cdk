@@ -6,7 +6,7 @@ g_dest_path=/opt/cdk
 #g_dest_path=/opt/devbus
 
 #全局变量，系统的名字　"ubuntu" "centos"
-g_system=$(get_system)
+g_system="centos"
 
 #==========================================
 
