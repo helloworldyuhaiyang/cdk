@@ -46,16 +46,17 @@ cmake_install_cpp()
     
     # 开始安装
     cd ${srcPath}
+	build="cdkbuild"
 	#清空原目录
-	if test -d "build" 
+	if test -d ${build}"
 	then
-		rm "build" -rf
+		rm ${build} -rf
 	fi
-	mkdir build
-	cd build/
+	mkdir ${build}
+	cd ${build}
 	cmake ../ -DCMAKE_INSTALL_PREFIX=${dest_path} ${cmake_args}
-    	make -j2
-    	make install
+   	make -j2
+   	make install
 	echo "===================================="
     echo "${proName} ${version} 安装成功"
 	echo "===================================="
