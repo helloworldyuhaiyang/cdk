@@ -19,6 +19,8 @@ if [ $g_system == "centos" ]; then
 elif [ $g_system == "ubuntu" ]; then
 	apt-get install make  -y
 	apt-get install cmake -y	
+elif [ $g_system == "macos" ]; then
+
 else
 	echo "未识别系统"
 fi

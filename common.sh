@@ -6,7 +6,7 @@ g_dest_path=/opt/cdk
 #g_dest_path=/opt/devbus
 
 #全局变量，系统的名字　"ubuntu" "centos"
-g_system="centos"
+g_system="macos"
 
 #==========================================
 
@@ -48,7 +48,7 @@ cmake_install_cpp()
     cd ${srcPath}
 	build="cdkbuild"
 	#清空原目录
-	if test -d ${build}"
+	if test -d ${build}
 	then
 		rm ${build} -rf
 	fi
