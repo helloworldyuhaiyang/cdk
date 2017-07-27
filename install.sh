@@ -31,10 +31,10 @@ fi
 #./pcap.sh
 
 #安装 gtest
-#./gtest.sh
+./gtest.sh
 
 #安装rabbitmq-c
-./rabbitmq.sh
+#./rabbitmq.sh
 
 
 #安装snmp++
