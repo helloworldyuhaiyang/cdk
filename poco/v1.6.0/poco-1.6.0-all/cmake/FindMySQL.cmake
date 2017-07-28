@@ -5,11 +5,13 @@ find_path(MYSQL_INCLUDE_DIR mysql.h
 		/opt/mysql/mysql/include/mysql
 		/usr/local/mysql/include
 		/usr/local/mysql/include/mysql
+		/usr/local/Cellar/mysql/5.7.19/include/mysql
 		$ENV{MYSQL_INCLUDE_DIR}
 		$ENV{MYSQL_DIR}/include
 		$ENV{ProgramFiles}/MySQL/*/include
 		$ENV{SystemDrive}/MySQL/*/include)
 
+	message( STATUS "======================${MYSQL_INCLUDE_DIR}=======================")
 if (WIN32)
 	if (CMAKE_BUILD_TYPE STREQUAL Debug)
 		set(libsuffixDist debug)
@@ -28,10 +30,11 @@ if (WIN32)
 				 $ENV{ProgramFiles}/MySQL/*/lib/${libsuffixDist}
 				 $ENV{SystemDrive}/MySQL/*/lib/${libsuffixDist})
 else (WIN32)
-	find_library(MYSQL_LIB NAMES mysqlclient_r
+	message( STATUS "=====================不是 win32=======================")
+	find_library(MYSQL_LIB NAMES mysqlclient
 				 PATHS
 				 /usr/lib/mysql
-				 /usr/local/lib/mysql
+				 /usr/local/lib/
 				 /usr/local/mysql/lib
 				 /usr/local/mysql/lib/mysql
 				 /opt/mysql/mysql/lib
@@ -41,6 +44,7 @@ else (WIN32)
 				 $ENV{MYSQL_DIR}/lib/mysql)
 endif (WIN32)
 
+message( STATUS "======================${MYSQL_LIB_DIR}=======================")
 if(MYSQL_LIB)
 	get_filename_component(MYSQL_LIB_DIR ${MYSQL_LIB} PATH)
 endif(MYSQL_LIB)
