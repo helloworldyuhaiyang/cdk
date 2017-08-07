@@ -20,7 +20,7 @@ elif [ $g_system == "ubuntu" ]; then
 	apt-get install make  -y
 	apt-get install cmake -y	
 elif [ $g_system == "macos" ]; then
-
+	echo "mac os 商处于调试阶段"
 else
 	echo "未识别系统"
 fi
