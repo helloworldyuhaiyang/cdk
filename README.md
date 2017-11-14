@@ -1,5 +1,5 @@
-#CDK
-##特别说明
+# CDK
+## 特别说明
 poco 1.6.1 JSON set() 的时候如果key已经存在的 key 则会 set 失败。
 ```
 void Object::set(const std::string& key, const Dynamic::Var& value)
@@ -18,7 +18,7 @@ void Object::set(const std::string& key, const Dynamic::Var& value)
 }
 ```
 
-##使用 cdk 开发的优点
+## 使用 cdk 开发的优点
 1.一键部署c,c++ 的运行环境。开发环境和生产环境安装好cdk之后，编写的代码,所有的库环境一致，可以保证在开发环的代码上线不会遇到问题。 
 
 2.使用约定优于配置的方式实现的个依赖库的向前兼容。同时保证了同一台服务器上部署的应用可以使用不同版本的相同的动态库。 
@@ -35,6 +35,10 @@ void Object::set(const std::string& key, const Dynamic::Var& value)
 
 
 ## cdk 的使用及原理
+1.编辑 common.sh 修改 g_dest_path 为想要安装的路径。注意要保持生产环境和开发环境一致。
+2. 编辑 install.sh 把不需要的库注释掉。
+3. sudo ./install.sh  等待安装完成。
+
 原理是使用 shell 脚本在不同的 linux 发行版下编译同样的库，并安装到同样的指定目录。
 我们的应用代码，在开发环境开发好，在生产环境一键部署了 cdk 之后，我们的应用就可以在生产上编译运行。
 
