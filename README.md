@@ -35,10 +35,9 @@ void Object::set(const std::string& key, const Dynamic::Var& value)
 
 
 ## cdk 的使用及原理
-1.编辑 common.sh 修改 g_dest_path 为想要安装的路径。注意要保持生产环境和开发环境一致。
+1. 编辑 common.sh 修改 g_dest_path 为想要安装的路径。注意要保持生产环境和开发环境一致。
 2. 编辑 install.sh 把不需要的库注释掉。
 3. sudo ./install.sh  等待安装完成。
-
 原理是使用 shell 脚本在不同的 linux 发行版下编译同样的库，并安装到同样的指定目录。
 我们的应用代码，在开发环境开发好，在生产环境一键部署了 cdk 之后，我们的应用就可以在生产上编译运行。
 
