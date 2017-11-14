@@ -38,11 +38,15 @@ void Object::set(const std::string& key, const Dynamic::Var& value)
 1. 编辑 common.sh 修改 g_dest_path 为想要安装的路径。注意要保持生产环境和开发环境一致。
 2. 编辑 install.sh 把不需要的库注释掉。
 3. sudo ./install.sh  等待安装完成。
+
+
 原理是使用 shell 脚本在不同的 linux 发行版下编译同样的库，并安装到同样的指定目录。
 我们的应用代码，在开发环境开发好，在生产环境一键部署了 cdk 之后，我们的应用就可以在生产上编译运行。
 
 common.sh 提供了 cdk 安装常用的全局变量(cdk安装路径)，方法(cmake ,make 方式安装的动态库的函数)。
+
 install.sh 调用了需要安装的模块。如果要定制裁剪增加某个模块可以在这里增加，或者注释掉。
+
 xxxx.sh 每个开发库都有一个对应的 .sh 文件。这个 .sh 文件就是具体安装某个模块的方法,并且保证兼容 ubuntu 和 centos。通常这个 .sh 调用 　　　　common.sh 里的方法就可以了。
 
 
