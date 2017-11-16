@@ -35,7 +35,7 @@ void Object::set(const std::string& key, const Dynamic::Var& value)
 
 
 ## cdk 的使用及原理
-1. 编辑 common.sh 修改 g_dest_path 为想要安装的路径。注意要保持生产环境和开发环境一致。
+1. 编辑 common.sh 修改 g_dest_path 为想要安装的路径。注意要保持生产环境和开发环境一致。修改 g_system="xxx" xxx 为你的系统类型。
 2. 编辑 install.sh 把不需要的库注释掉。
 3. sudo ./install.sh  等待安装完成。
 
