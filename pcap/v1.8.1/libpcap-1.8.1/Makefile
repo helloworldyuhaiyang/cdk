@@ -22,7 +22,7 @@
 #
 
 # Top level hierarchy
-prefix = /opt/devbus/pcap/v1.8.1
+prefix = /opt/cdk/pcap/v1.8.1
 exec_prefix = ${prefix}
 datarootdir = ${prefix}/share
 # Pathname of directory to install the configure program
@@ -47,7 +47,7 @@ CC = gcc
 AR = ar
 LN_S = ln -s
 MKDEP = 
-CCOPT =  -fvisibility=hidden -fpic
+CCOPT =  -fvisibility=hidden -fno-common -arch x86_64 -arch i386
 INCLS = -I. 
 DEFS = -DBUILDING_PCAP -DHAVE_CONFIG_H  -D_U_="__attribute__((unused))"
 ADDLOBJS = 
@@ -55,9 +55,9 @@ ADDLARCHIVEOBJS =
 LIBS = 
 CROSSFLAGS=
 CFLAGS = -g -O2   ${CROSSFLAGS}
-LDFLAGS =  ${CROSSFLAGS}
-DYEXT = so
-V_RPATH_OPT = -Wl,-rpath,
+LDFLAGS =  -arch x86_64 -arch i386 ${CROSSFLAGS}
+DYEXT = dylib
+V_RPATH_OPT = 
 DEPENDENCY_CFLAG = 
 PROG=libpcap
 
@@ -79,7 +79,7 @@ YACC = bison -y
 	@rm -f $@
 	$(CC) $(FULL_CFLAGS) -c $(srcdir)/$*.c
 
-PSRC =	pcap-linux.c pcap-usb-linux.c   pcap-netfilter-linux.c 
+PSRC =	pcap-bpf.c     
 FSRC =  fad-getad.c
 SSRC =  
 CSRC =	pcap.c inet.c fad-helpers.c gencode.c optimize.c nametoaddr.c \
@@ -371,7 +371,7 @@ libpcap.so: $(OBJ)
 	@rm -f $@
 	VER=`cat $(srcdir)/VERSION`; \
 	MAJOR_VER=`sed 's/\([0-9][0-9]*\)\..*/\1/' $(srcdir)/VERSION`; \
-	$(CC) -shared -Wl,-soname,$@.$$MAJOR_VER $(LDFLAGS) \
+	$(CC) -shared $@.$$MAJOR_VER $(LDFLAGS) \
 	    -o $@.$$VER $(OBJ) $(ADDLOBJS) $(LIBS)
 
 #

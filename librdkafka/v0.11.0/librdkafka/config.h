@@ -50,6 +50,8 @@
 #define WITH_SOCKEM 1
 // libssl
 #define WITH_SSL 1
+// libsasl2
+#define WITH_SASL_CYRUS 1
 // WITH_SASL_SCRAM
 #define WITH_SASL_SCRAM 1
 // regex

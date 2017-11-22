@@ -75,37 +75,37 @@
 /* #undef HAVE_LINUX_COMPILER_H */
 
 /* Define to 1 if you have the <linux/ethtool.h> header file. */
-#define HAVE_LINUX_ETHTOOL_H 1
+/* #undef HAVE_LINUX_ETHTOOL_H */
 
 /* Define to 1 if you have the <linux/if_bonding.h> header file. */
-#define HAVE_LINUX_IF_BONDING_H 1
+/* #undef HAVE_LINUX_IF_BONDING_H */
 
 /* Define to 1 if you have the <linux/if_packet.h> header file. */
-#define HAVE_LINUX_IF_PACKET_H 1
+/* #undef HAVE_LINUX_IF_PACKET_H */
 
 /* Define to 1 if you have the <linux/net_tstamp.h> header file. */
-#define HAVE_LINUX_NET_TSTAMP_H 1
+/* #undef HAVE_LINUX_NET_TSTAMP_H */
 
 /* Define to 1 if you have the <linux/sockios.h> header file. */
-#define HAVE_LINUX_SOCKIOS_H 1
+/* #undef HAVE_LINUX_SOCKIOS_H */
 
 /* if tp_vlan_tci exists */
-#define HAVE_LINUX_TPACKET_AUXDATA_TP_VLAN_TCI 1
+/* #undef HAVE_LINUX_TPACKET_AUXDATA_TP_VLAN_TCI */
 
 /* Define to 1 if you have the <linux/types.h> header file. */
-#define HAVE_LINUX_TYPES_H 1
+/* #undef HAVE_LINUX_TYPES_H */
 
 /* Define to 1 if you have the <linux/usbdevice_fs.h> header file. */
-#define HAVE_LINUX_USBDEVICE_FS_H 1
+/* #undef HAVE_LINUX_USBDEVICE_FS_H */
 
 /* Define to 1 if you have the <linux/wireless.h> header file. */
-#define HAVE_LINUX_WIRELESS_H 1
+/* #undef HAVE_LINUX_WIRELESS_H */
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the <netinet/ether.h> header file. */
-#define HAVE_NETINET_ETHER_H 1
+/* #undef HAVE_NETINET_ETHER_H */
 
 /* Define to 1 if you have the <netinet/if_ether.h> header file. */
 #define HAVE_NETINET_IF_ETHER_H 1
@@ -114,10 +114,10 @@
 /* #undef HAVE_NETPACKET_IF_PACKET_H */
 
 /* Define to 1 if you have the <netpacket/packet.h> header file. */
-#define HAVE_NETPACKET_PACKET_H 1
+/* #undef HAVE_NETPACKET_PACKET_H */
 
 /* Define to 1 if you have the <net/if_media.h> header file. */
-/* #undef HAVE_NET_IF_MEDIA_H */
+#define HAVE_NET_IF_MEDIA_H 1
 
 /* Define to 1 if you have the <net/pfvar.h> header file. */
 /* #undef HAVE_NET_PFVAR_H */
@@ -138,7 +138,7 @@
 #define HAVE_SNPRINTF 1
 
 /* if struct sockaddr has the sa_len member */
-/* #undef HAVE_SOCKADDR_SA_LEN */
+#define HAVE_SOCKADDR_SA_LEN 1
 
 /* if struct sockaddr_storage exists */
 #define HAVE_SOCKADDR_STORAGE 1
@@ -165,19 +165,19 @@
 #define HAVE_STRING_H 1
 
 /* Define to 1 if you have the `strlcpy' function. */
-/* #undef HAVE_STRLCPY */
+#define HAVE_STRLCPY 1
 
 /* Define to 1 if you have the `strtok_r' function. */
 #define HAVE_STRTOK_R 1
 
 /* Define to 1 if the system has the type `struct BPF_TIMEVAL'. */
-/* #undef HAVE_STRUCT_BPF_TIMEVAL */
+#define HAVE_STRUCT_BPF_TIMEVAL 1
 
 /* Define to 1 if the system has the type `struct ether_addr'. */
 /* #undef HAVE_STRUCT_ETHER_ADDR */
 
 /* Define to 1 if you have the <sys/bitypes.h> header file. */
-#define HAVE_SYS_BITYPES_H 1
+/* #undef HAVE_SYS_BITYPES_H */
 
 /* Define to 1 if you have the <sys/bufmod.h> header file. */
 /* #undef HAVE_SYS_BUFMOD_H */
@@ -186,13 +186,13 @@
 /* #undef HAVE_SYS_DLPI_EXT_H */
 
 /* Define to 1 if you have the <sys/ioccom.h> header file. */
-/* #undef HAVE_SYS_IOCCOM_H */
+#define HAVE_SYS_IOCCOM_H 1
 
 /* Define to 1 if you have the <sys/select.h> header file. */
 #define HAVE_SYS_SELECT_H 1
 
 /* Define to 1 if you have the <sys/sockio.h> header file. */
-/* #undef HAVE_SYS_SOCKIO_H */
+#define HAVE_SYS_SOCKIO_H 1
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
@@ -204,13 +204,13 @@
 /* #undef HAVE_TC_API */
 
 /* if if_packet.h has tpacket_stats defined */
-#define HAVE_TPACKET_STATS 1
+/* #undef HAVE_TPACKET_STATS */
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #define HAVE_UNISTD_H 1
 
 /* if struct usbdevfs_ctrltransfer has bRequestType */
-#define HAVE_USBDEVFS_CTRLTRANSFER_BREQUESTTYPE 1
+/* #undef HAVE_USBDEVFS_CTRLTRANSFER_BREQUESTTYPE */
 
 /* Define to 1 if you have the `vsnprintf' function. */
 #define HAVE_VSNPRINTF 1
@@ -228,13 +228,13 @@
 /* #undef LBL_ALIGN */
 
 /* path for device for USB sniffing */
-#define LINUX_USB_MON_DEV "/dev/usbmon"
+/* #undef LINUX_USB_MON_DEV */
 
 /* Define to 1 if netinet/ether.h declares `ether_hostton' */
-#define NETINET_ETHER_H_DECLARES_ETHER_HOSTTON /**/
+/* #undef NETINET_ETHER_H_DECLARES_ETHER_HOSTTON */
 
 /* Define to 1 if netinet/if_ether.h declares `ether_hostton' */
-/* #undef NETINET_IF_ETHER_H_DECLARES_ETHER_HOSTTON */
+#define NETINET_IF_ETHER_H_DECLARES_ETHER_HOSTTON /**/
 
 /* do not use protochain */
 /* #undef NO_PROTOCHAIN */
@@ -270,13 +270,13 @@
 /* #undef PCAP_SUPPORT_DBUS */
 
 /* target host supports netfilter sniffing */
-#define PCAP_SUPPORT_NETFILTER 1
+/* #undef PCAP_SUPPORT_NETFILTER */
 
 /* use Linux packet ring capture if available */
 #define PCAP_SUPPORT_PACKET_RING 1
 
 /* target host supports USB sniffing */
-#define PCAP_SUPPORT_USB 1
+/* #undef PCAP_SUPPORT_USB */
 
 /* include ACN support */
 /* #undef SITA */

@@ -38,8 +38,8 @@ namespace TUtil {
 
 std::atomic_long CLog::_longNum(0);
  //一些默认值常量
-const std::string CLog::HEAD_FMT			  =		"%lu [**%s**] [class:%s] [func:%s] MSG:";
-const std::string CLog::HEAD_FMT_INDEX		  =		"%lu [**%s**] [class:%s] [func:%s] [%s:%s] MSG:";
+const std::string CLog::HEAD_FMT			  =		"[**%s**] [class:%s] [func:%s] MSG:";
+const std::string CLog::HEAD_FMT_INDEX		  =		"[**%s**] [class:%s] [func:%s] [%s:%s] MSG:";
 const std::string CLog::DEFAULT_LOG_ROTATION  =		"1 days";
 const std::string CLog::DEFAULT_LOG_PURGEAGE  =		"1 months";
 const std::string CLog::DEFAULT_LOG_LEVEL	  =		"information";
@@ -98,7 +98,7 @@ void CLog::initLog(const std::string& dir, const std::string& file, const std::s
         //每条日志的格式。
         Poco::AutoPtr<Poco::PatternFormatter> patternFormatter(
                                 new Poco::PatternFormatter());
-        patternFormatter->setProperty("pattern", "%L%Y-%m-%d %H:%M:%S.%i (%p): %t");
+        patternFormatter->setProperty("pattern", "%L%Y-%m-%d %H:%M:%S (%p): %t");
 
         //初始化　Channel
         channel = new Poco::FormattingChannel(patternFormatter, fileChannel);
@@ -319,18 +319,17 @@ std::string CLog::__getLogHead(ELogType type, const std::string &className, cons
         throw std::invalid_argument( "invalid type" );
     }
     //获取线程 id
-    Poco::Thread::TID tid = Poco::Thread::currentTid();
+    //Poco::Thread::TID tid = Poco::Thread::currentTid();
     //获取日志头
     std::string head;
     if ("" != indexName)
     {
-        Poco::format(head, HEAD_FMT_INDEX, tid,stype, className, func, indexName, indexValue);
+        Poco::format(head, HEAD_FMT_INDEX, stype, className, func, indexName, indexValue);
     }
     else
     {
-        Poco::format(head, HEAD_FMT, tid,stype, className, func);
+        Poco::format(head, HEAD_FMT, stype, className, func);
     }
-
 
     return head;
 }

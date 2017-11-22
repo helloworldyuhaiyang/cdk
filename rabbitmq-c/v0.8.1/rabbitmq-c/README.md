@@ -1,3 +1,7 @@
+# 单独安装方法
+sudo ./configure --prefix=/opt/cdk/rabbitmq/v0.8.1
+sudo make 
+sudo make install
 # RabbitMQ C AMQP client library
 
 [![Build Status](https://secure.travis-ci.org/alanxz/rabbitmq-c.png?branch=master)](http://travis-ci.org/alanxz/rabbitmq-c)

@@ -1,4 +1,4 @@
-# mklove configure cache file generated at 2017年 06月 20日 星期二 19:04:46 CST
+# mklove configure cache file generated at 2017年11月14日 星期二 08时55分57秒 CST
 MKL_STATUS_distro=ok
 MKL_STATUS_ccenv=failed
 MKL_STATUS_gcc=ok
@@ -28,7 +28,7 @@ MKL_STATUS_liblz4=failed
 MKL_STATUS_libssl_PKGCONFIG=failed
 MKL_STATUS_libssl=ok
 MKL_STATUS_libsasl2_PKGCONFIG=failed
-MKL_STATUS_libsasl2=failed
+MKL_STATUS_libsasl2=ok
 MKL_STATUS_libsasl_PKGCONFIG=failed
 MKL_STATUS_libsasl=failed
 MKL_STATUS_regex=ok
@@ -38,3 +38,4 @@ MKL_STATUS_strndup=ok
 MKL_STATUS_libdl_PKGCONFIG=failed
 MKL_STATUS_libdl=ok
 MKL_STATUS_python=ok
+MKL_STATUS_cc_g_dwarf=ok

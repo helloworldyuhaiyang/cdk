@@ -3,6 +3,7 @@
 
 #include <Poco/Util/ServerApplication.h>
 
+//默认打开的配置文件位置，不是 json 格式的。
 #define DEFAULT_CONG_PATH 				"./etc/conf.json"
 
 namespace Taiji

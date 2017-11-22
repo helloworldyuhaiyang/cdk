@@ -1,60 +1,45 @@
 # configure exec: ./configure --prefix=/opt/cdk/kafka/v0.11.0
-# On 2017年 06月 20日 星期二 19:04:45 CST
+# On 2017年11月14日 星期二 08时55分55秒 CST
 DBG: ccenv: WITH_CC:  --version failed: mklove/modules/configure.base: line 1184: --version: command not found
 DBG: Check ccenv (WITH_CC, action cont (originally cont)) failed: command ' --version' failed:
 mklove/modules/configure.base: line 1184: --version: command not found
 DBG: cxxenv: WITH_CXX:  --version failed: mklove/modules/configure.base: line 1184: --version: command not found
 DBG: Check cxxenv (WITH_CXX, action cont (originally cont)) failed: command ' --version' failed:
 mklove/modules/configure.base: line 1184: --version: command not found
+DBG: Compile check cc_g_dwarf (): gcc   -Wall -Werror _mkltmpq3exOD.c -o _mkltmpq3exOD.c.o   -gstrict-dwarf
 DBG: pkg-config check libpthread (): pkg-config --short-errors --cflags libpthread
 DBG: 'pkg-config --short-errors --cflags libpthread' failed: No package 'libpthread' found
 DBG: Check libpthread_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libpthread' failed:
 No package 'libpthread' found
 DBG: pkg-config check zlib (): pkg-config --short-errors --cflags zlib
 DBG: pkg-config check libcrypto (): pkg-config --short-errors --cflags libcrypto
+DBG: 'pkg-config --short-errors --cflags libcrypto' failed: No package 'libcrypto' found
+DBG: Check libcrypto_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libcrypto' failed:
+No package 'libcrypto' found
 DBG: pkg-config check liblz4 (): pkg-config --short-errors --cflags liblz4
 DBG: 'pkg-config --short-errors --cflags liblz4' failed: No package 'liblz4' found
 DBG: Check liblz4_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags liblz4' failed:
 No package 'liblz4' found
-DBG: Compile check liblz4 (WITH_LZ4_EXT): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp1rMDlc.c -o _mkltmp1rMDlc.c.o   -llz4
-DBG: compile check for liblz4 (WITH_LZ4_EXT) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp1rMDlc.c -o _mkltmp1rMDlc.c.o   -llz4: _mkltmp1rMDlc.c:1:22: fatal error: lz4frame.h: No such file or directory
-compilation terminated.
+DBG: Compile check liblz4 (WITH_LZ4_EXT): gcc  -gstrict-dwarf -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpajs6SW.c -o _mkltmpajs6SW.c.o   -llz4
+DBG: compile check for liblz4 (WITH_LZ4_EXT) failed: gcc  -gstrict-dwarf -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpajs6SW.c -o _mkltmpajs6SW.c.o   -llz4: _mkltmpajs6SW.c:1:10: fatal error: 'lz4frame.h' file not found
+#include <lz4frame.h>
+         ^~~~~~~~~~~~
+1 error generated.
 DBG: Check liblz4 (WITH_LZ4_EXT, action disable (originally disable)) failed: compile check failed:
 CC: CC
 flags: -llz4
-gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmp1rMDlc.c -o _mkltmp1rMDlc.c.o   -llz4:
-_mkltmp1rMDlc.c:1:22: fatal error: lz4frame.h: No such file or directory
-compilation terminated.
+gcc  -gstrict-dwarf -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpajs6SW.c -o _mkltmpajs6SW.c.o   -llz4:
+_mkltmpajs6SW.c:1:10: fatal error: 'lz4frame.h' file not found
+#include <lz4frame.h>
+         ^~~~~~~~~~~~
+1 error generated.
 source: #include <lz4frame.h>
 DBG: pkg-config check libssl (): pkg-config --short-errors --cflags libssl
 DBG: pkg-config check libsasl2 (): pkg-config --short-errors --cflags libsasl2
 DBG: 'pkg-config --short-errors --cflags libsasl2' failed: No package 'libsasl2' found
 DBG: Check libsasl2_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libsasl2' failed:
 No package 'libsasl2' found
-DBG: Compile check libsasl2 (WITH_SASL_CYRUS): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpQjTemi.c -o _mkltmpQjTemi.c.o   -lsasl2
-DBG: compile check for libsasl2 (WITH_SASL_CYRUS) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpQjTemi.c -o _mkltmpQjTemi.c.o   -lsasl2: _mkltmpQjTemi.c:1:23: fatal error: sasl/sasl.h: No such file or directory
-compilation terminated.
-DBG: Check libsasl2 (WITH_SASL_CYRUS, action disable (originally disable)) failed: compile check failed:
-CC: CC
-flags: -lsasl2
-gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpQjTemi.c -o _mkltmpQjTemi.c.o   -lsasl2:
-_mkltmpQjTemi.c:1:23: fatal error: sasl/sasl.h: No such file or directory
-compilation terminated.
-source: #include <sasl/sasl.h>
-DBG: pkg-config check libsasl (): pkg-config --short-errors --cflags libsasl
-DBG: 'pkg-config --short-errors --cflags libsasl' failed: No package 'libsasl' found
-DBG: Check libsasl_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags libsasl' failed:
-No package 'libsasl' found
-DBG: Compile check libsasl (WITH_SASL_CYRUS): gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpTMfGoC.c -o _mkltmpTMfGoC.c.o   -lsasl
-DBG: compile check for libsasl (WITH_SASL_CYRUS) failed: gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpTMfGoC.c -o _mkltmpTMfGoC.c.o   -lsasl: _mkltmpTMfGoC.c:1:23: fatal error: sasl/sasl.h: No such file or directory
-compilation terminated.
-DBG: Check libsasl (WITH_SASL_CYRUS, action disable (originally disable)) failed: compile check failed:
-CC: CC
-flags: -lsasl
-gcc  -g -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpTMfGoC.c -o _mkltmpTMfGoC.c.o   -lsasl:
-_mkltmpTMfGoC.c:1:23: fatal error: sasl/sasl.h: No such file or directory
-compilation terminated.
-source: #include <sasl/sasl.h>
+DBG: Compile check libsasl2 (WITH_SASL_CYRUS): gcc -I/usr/local/Cellar/openssl/1.0.2m/include -gstrict-dwarf -O2 -fPIC -Wall -Wsign-compare -Wfloat-equal -Wpointer-arith -Wcast-align -Wall -Werror _mkltmpLncHsT.c -o _mkltmpLncHsT.c.o   -lsasl2
 DBG: pkg-config check librt (): pkg-config --short-errors --cflags librt
 DBG: 'pkg-config --short-errors --cflags librt' failed: No package 'librt' found
 DBG: Check librt_PKGCONFIG (, action cont (originally cont)) failed: 'pkg-config --short-errors --cflags librt' failed:

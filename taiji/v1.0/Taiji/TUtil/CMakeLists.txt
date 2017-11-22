@@ -40,4 +40,4 @@ target_link_libraries(${PROJECT_NAME} PocoFoundation PocoNet PocoUtil)
 install(FILES ${HEADFILE} DESTINATION include/Taiji/TUtil)
 
 #设置库文件的安装路径
-install(TARGETS TaijiUtil LIBRARY DESTINATION lib)
+install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION lib)
