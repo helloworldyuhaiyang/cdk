@@ -1,5 +1,5 @@
-.deps/
-.libs/
+/.deps/
+/.libs/
 .dirstamp/
 Makefile
 *.o
@@ -13,4 +13,8 @@ cdkbuild/
 *.lds
 *.config
 *.cache
-test/
+/test/
+*.Plo
+*.la
+/sample/
+
