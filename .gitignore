@@ -1,0 +1,8 @@
+.deps
+.libs
+.dirstamp
+Makefile
+*.o
+*.lo
+*.dylib
+*.cmake
