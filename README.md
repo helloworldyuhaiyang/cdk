@@ -1,3 +1,5 @@
+*现在能用 docker 当然用 docker*
+
 # CDK
 ## 特别说明
 poco 1.6.1 JSON set() 的时候如果key已经存在的 key 则会 set 失败。
